@@ -50,8 +50,8 @@ if buscar in empleados:
     emp = empleados[buscar]
     print("NOMBRE:", emp["nombre"])
     print("DEPARTAMENTO:", emp["departamento"])
-    print("ANTIGÜEDAD:", emp["antiguedad"])
-    print("TELÉFONO:", emp["contacto"]["telefono"])
+    print("ANTIGUEDAD:", emp["antiguedad"])
+    print("TELEFONO:", emp["contacto"]["telefono"])
     print("CORREO:", emp["contacto"]["correo"])
     print("PUNTUALIDAD:", emp["evaluacion"]["puntualidad"])
     print("EQUIPO:", emp["evaluacion"]["equipo"])
