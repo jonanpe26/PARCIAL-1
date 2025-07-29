@@ -41,5 +41,9 @@ empleados={"codigo":{
         "correo": correo
     }
 }}
-print(f"TOTAL DE EMPLEADOS REGISTRADOS: {len(empleados)}")
+print(f"total de empleados registrados: {len(empleados)}")
+
+buscar=int(input("ingrese el codigo del empleado que desea buscar"))
+
+
 
