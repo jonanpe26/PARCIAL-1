@@ -25,25 +25,39 @@ for i in range(cantidad):
 
 
 
-empleados={"codigo":{
-    "nombre": nombre,
-    "departamento": departamento,
-    "antiguedad": antiguedad,
-    "evaluacion":{
-        "puntualidad": puntualidad,
-        "equipo": equipo,
-        "productividad": productividad,
-        "promedio": promedio,
-        "estado":"satisfacortio"
-    },
-    "contacto":{
-        "telefono": telefono,
-        "correo": correo
+    empleados[codigo]={
+        "nombre": nombre,
+        "departamento": departamento,
+        "antiguedad": antiguedad,
+        "contacto": {
+            "telefono": telefono,
+            "correo": correo
+        },
+        "evaluacion": {
+            "puntualidad": puntualidad,
+            "equipo": equipo,
+            "productividad": productividad,
+            "promedio": promedio,
+            "estado": estado,
+            "observaciones": observaciones
+        }
     }
-}}
+
 print(f"total de empleados registrados: {len(empleados)}")
+buscar = int(input("ingrese codigo de empleado "))
 
-buscar=int(input("ingrese el codigo del empleado que desea buscar"))
-
-
-
+if buscar in empleados:
+    emp = empleados[buscar]
+    print("NOMBRE:", emp["nombre"])
+    print("DEPARTAMENTO:", emp["departamento"])
+    print("ANTIGÜEDAD:", emp["antiguedad"])
+    print("TELÉFONO:", emp["contacto"]["telefono"])
+    print("CORREO:", emp["contacto"]["correo"])
+    print("PUNTUALIDAD:", emp["evaluacion"]["puntualidad"])
+    print("EQUIPO:", emp["evaluacion"]["equipo"])
+    print("PRODUCTIVIDAD:", emp["evaluacion"]["productividad"])
+    print("PROMEDIO:", round(emp["evaluacion"]["promedio"], 2))
+    print("ESTADO:", emp["evaluacion"]["estado"])
+    print("OBSERVACIONES:", emp["evaluacion"]["observaciones"])
+else:
+    print("EMPLEADO NO ENCONTRADO.")
